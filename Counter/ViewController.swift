@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var digit: Int = 0
+    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     
-    var digit: Int = 0
-  
+    @IBAction func addCounter(_ sender: Any) {
+        digit += 1
+        label.text = "Значение счётчика: \(digit)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,9 +26,7 @@ class ViewController: UIViewController {
         button.setTitle("+1", for: .normal)
     }
 
-    @IBAction func addCounter(_ sender: Any) {
-       digit += 1
-        label.text = "Значение счётчика: \(digit)"    }
+  
     
 }
 
